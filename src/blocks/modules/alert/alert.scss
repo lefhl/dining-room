@@ -1,0 +1,18 @@
+.alert {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 250px;
+    line-height: 50px;
+    height: 50px;
+    text-align: center;
+    background-color: $warm;
+    opacity: 0;
+    display: none;
+    transition-duration: 0.3s;
+}
+
+.alert.active {
+    display: block;
+    opacity: 1;
+}

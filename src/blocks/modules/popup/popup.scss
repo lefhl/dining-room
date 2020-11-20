@@ -1,0 +1,104 @@
+.popup {
+    position: absolute;
+    display: none;
+    background-color: $dark-translucent-bg;
+    height: 100vh;
+    width: 100vw;
+    cursor: pointer;
+
+    &__container {
+        display: flex;
+        position: relative;
+        background-color: $white;
+        padding: 60px 60px 60px 50px;
+        top: 0;
+        right: 0;
+        cursor: auto;
+    }
+
+    &__call {
+        margin-right: 115px;
+    }
+    &__phone {
+        font-size: 20px;
+        color: $top-header-color;
+    }
+    &__description {
+        margin-bottom: 27px;
+        color: $pale;
+    }
+    &__subtitle {
+        margin-bottom: 20px;
+    }
+    &__radio-item {
+        display: flex;
+        align-items: center;
+
+        &:not(:last-child) {
+            margin-bottom: 18px;
+        }
+    }
+    &__radio-input {
+        display: none;
+
+        &:checked ~ label {
+            border-bottom: 1px solid $pale;
+        }
+    }
+
+    &__radio-label {
+        margin-left: 10px;
+
+        &:hover {
+            border-bottom: 1px solid $pale;
+        }
+    }
+
+    &__back-call {
+        display: flex;
+        flex-direction: column;
+    }
+    &__title {
+        font-size: 20px;
+    }
+    &__input {
+        border-bottom: 1px solid $pale;
+        padding-left: 10px;
+        padding-top: 7px;
+        padding-bottom: 7px;
+
+        &:focus {
+            border-bottom-color: $warm;
+        }
+    }
+    &__name-input {
+        margin-bottom: 17px;
+    }
+    &__phone-input {
+        margin-bottom: 23px;
+    }
+
+    &.active {
+        display: flex;
+        align-items: flex-start;
+    }
+    &__btn {
+        width: 135px;
+        height: 45px;
+        line-height: 45px;
+        text-align: center;
+        border-radius: 22px;
+        background-color: $warm;
+        color: $white;
+        cursor: pointer;
+    }
+    &__close {
+        position: absolute;
+        top: 17px;
+        right: 17px;
+        font-size: 20px;
+        font-weight: 100;
+        color: $pale;
+        cursor: pointer;
+    }
+}

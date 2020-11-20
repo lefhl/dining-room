@@ -1,0 +1,16 @@
+.brands-bar {
+    margin-top: 20px;
+    background-color: $white; 
+    cursor: grab;   
+    
+    &__slider {
+    display: flex;
+    padding: 30px 65px;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    }
+    &__item {
+        width: auto;
+    }
+}

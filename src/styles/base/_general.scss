@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 1920px;
+  font-family: "MyriadPro", sans-serif;
+  background-color: $bg;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  @include container();
+  @include sm(max-width, rem(510));
+  @include md(max-width, rem(690));
+  @include lg(max-width, rem(930));
+  @include xl(max-width, rem(1110));
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  list-style-type: none;
+}
+
+button {
+  border: none;
+  outline: none;
+}
+
+.wrapper {
+  width: 1545px;
+  margin: 0 auto;
+}
+
+.clicked {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.active {
+  display: block;
+}
+
+input {
+  outline: none;
+  border: none;
+}
+label,
+input[type="radio"] {
+  cursor: pointer;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+@keyframes disappear {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.menu-link {
+  position: relative;
+  display: block;
+  padding-left: 30px;
+  padding-top: 17px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgb(186, 186, 186);
+  transition: color 0.2s;
+  &:first-child {
+    border-top: 1px solid rgb(186, 186, 186);
+  }
+  &:last-child {
+    border-bottom: none;
+  }
+  &:after {
+    position: absolute;
+    content: ">";
+    font-weight: 100;
+    color: $more-pale;
+    right: 20px;
+  }
+
+  &:hover {
+    color: $warm;
+  }
+}

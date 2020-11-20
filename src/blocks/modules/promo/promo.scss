@@ -1,0 +1,100 @@
+.promo {
+  display: flex;
+  padding-top: 20px;
+
+  &__menu-title {
+    padding-top: 35px;
+    padding-bottom: 30px;
+    padding-left: 25px;
+    font-size: 24px;
+    color: $warm;
+    white-space: nowrap;
+  }
+  &__menu {
+    background-color: $white;
+    margin-right: 25px;
+    min-width: 305px;
+  }
+  &__menu-link {
+    padding-left: 25px;
+    white-space: nowrap;
+  }
+  &__slide {
+    padding: 60px 80px 45px 70px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: $black;
+    color: $white;
+    cursor: grab;
+  }
+  &__caption {
+    padding-bottom: 70px;
+    font-weight: 100;
+    color: $pale;
+  }
+  &__slide-title {
+    font-size: 52px;
+    padding-bottom: 20px;
+  }
+  &__slide-subtitle {
+    padding-bottom: 70px;
+  }
+  &__link-button {
+    color: $white;
+    padding: 10px 20px;
+    background-color: $warm;
+    border-radius: 17px;
+    font-size: 18px;
+  }
+  &__sales {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    margin-left: 25px;
+    padding-left: 30px;
+    padding-right: 40px;
+    padding-bottom: 50px;
+    border: 1px solid $warm;
+    background-color: $white;
+    flex-grow: 1;
+  }
+  &__sales-img {
+    padding-bottom: 10px;
+  }
+  &__sales-caption {
+    padding-bottom: 5px;
+  }
+  &__sales-title {
+    padding-bottom: 25px;
+    font-size: 42px;
+  }
+  &__sales-link {
+    position: relative;
+
+    &:hover {
+      color: $warm;
+    }
+    &:after {
+      position: absolute;
+      content: ">";
+      right: -20px;
+    }
+  }
+}
+.swiper-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.swiper-pagination-bullet {
+  border: 1px solid $white;
+  cursor: pointer;
+  &-active {
+    background-color: $white;
+    border: none;
+  }
+}
