@@ -9,10 +9,10 @@ const swiper = new Swiper(".swiper-container.promo__slider", {
   slidesPerView: 1,
   spaceBetween: 30,
   centeredSlides: true,
-  autoplay: {
-    delay: 3500,
-    disableOnInteraction: false,
-  },
+  // autoplay: {
+  //   delay: 3500,
+  //   disableOnInteraction: false,
+  // },
 
   // If we need pagination
   pagination: {

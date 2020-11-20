@@ -3,8 +3,8 @@
   padding-top: 20px;
 
   &__menu-title {
-    padding-top: 35px;
-    padding-bottom: 30px;
+    padding-top: 30px;
+    padding-bottom: 10px;
     padding-left: 25px;
     font-size: 24px;
     color: $warm;
@@ -13,14 +13,25 @@
   &__menu {
     background-color: $white;
     margin-right: 25px;
-    min-width: 305px;
+    min-width: 300px;
   }
+
   &__menu-link {
     padding-left: 25px;
+    padding-bottom: 13px;
+    padding-top: 13px;
     white-space: nowrap;
   }
+  &__menu-item:nth-child(2) {
+    a {
+      border-top: none !important;
+    }
+  }
+  &__slider {
+    height: 475px;
+  }
   &__slide {
-    padding: 60px 80px 45px 70px;
+    padding: 60px 80px 45px 63px;
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
@@ -30,30 +41,39 @@
     cursor: grab;
   }
   &__caption {
-    padding-bottom: 70px;
+    padding-bottom: 62px;
     font-weight: 100;
     color: $pale;
   }
   &__slide-title {
-    font-size: 52px;
-    padding-bottom: 20px;
+    font-size: 40px;
+    line-height: 45px;
+    padding-bottom: 15px;
   }
   &__slide-subtitle {
     padding-bottom: 70px;
+    font-weight: 100;
+    font-size: 18px;
   }
   &__link-button {
     color: $white;
-    padding: 10px 20px;
+    padding: 7px 20px;
     background-color: $warm;
     border-radius: 17px;
     font-size: 18px;
+    transition: background-color 0.2s;
+    cursor: pointer;
+
+    &:hover {
+      background-color: darken($warm, 10%);
+    }
   }
   &__sales {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-start;
-    margin-left: 25px;
+    margin-left: 30px;
     padding-left: 30px;
     padding-right: 40px;
     padding-bottom: 50px;
@@ -89,6 +109,7 @@
   align-items: center;
   justify-content: center;
   width: 100%;
+  bottom: 32px !important;
 }
 .swiper-pagination-bullet {
   border: 1px solid $white;
