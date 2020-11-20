@@ -6,3 +6,11 @@
   display: block;
   content: $content;
 }
+
+@mixin dark-theme {
+  background-color: $dark-theme;
+  color: $white;
+}
+@mixin white-theme {
+  background-color: $white;
+}

@@ -66,10 +66,11 @@
     font-weight: 100;
     font-size: 24px;
     cursor: pointer;
-    transition: opacity 0.2s;
+    transition: box-shadow 0.2s, color 0.3s;
 
     &:hover {
-      opacity: 0.85;
+      color: $warm;
+      box-shadow: 1px 1px 10px #000;
     }
   }
 }
