@@ -45,6 +45,11 @@ button {
 .wrapper {
   width: 1545px;
   margin: 0 auto;
+
+  &--small {
+    width: 1400px;
+    margin: 0 auto;
+  }
 }
 
 .clicked {
@@ -66,6 +71,14 @@ input[type="radio"] {
 
 .uppercase {
   text-transform: uppercase;
+}
+
+.dark-theme {
+  background-color: $dark-theme;
+  color: $white;
+}
+.white-theme {
+  background-color: $white;
 }
 
 @keyframes disappear {
