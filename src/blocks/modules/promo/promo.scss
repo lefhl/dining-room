@@ -28,7 +28,7 @@
     }
   }
   &__slider {
-    height: 475px;
+    height: 478px;
   }
   &__slide {
     padding: 60px 80px 45px 63px;
@@ -48,10 +48,10 @@
   &__slide-title {
     font-size: 40px;
     line-height: 45px;
-    padding-bottom: 15px;
+    padding-bottom: 13px;
   }
   &__slide-subtitle {
-    padding-bottom: 70px;
+    padding-bottom: 72px;
     font-weight: 100;
     font-size: 18px;
   }
@@ -73,23 +73,27 @@
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-start;
-    margin-left: 30px;
-    padding-left: 30px;
-    padding-right: 40px;
+    flex: 1 0 300px;
+    min-width: 300px;
+    width: 100%;
+    margin-left: 22px;
+    padding-top: 220px;
+    padding-left: 26px;
     padding-bottom: 50px;
     border: 1px solid $warm;
     background-color: $white;
-    flex-grow: 1;
   }
   &__sales-img {
     padding-bottom: 10px;
   }
   &__sales-caption {
-    padding-bottom: 5px;
+    margin-top: 5px;
+    font-size: 18px;
+    font-weight: 100;
   }
   &__sales-title {
-    padding-bottom: 25px;
-    font-size: 42px;
+    font-size: 40px;
+    padding-bottom: 20px;
   }
   &__sales-link {
     position: relative;

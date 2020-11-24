@@ -1,16 +1,19 @@
 .brands-bar {
-    margin-top: 20px;
-    background-color: $white; 
-    cursor: grab;   
-    
-    &__slider {
+  margin-top: 20px;
+  background-color: $white;
+  cursor: grab;
+
+  &__slider {
     display: flex;
-    padding: 30px 65px;
+    padding: 33px 84px 26px 58px;
     justify-content: space-between;
     align-items: center;
     box-sizing: border-box;
-    }
-    &__item {
-        width: auto;
-    }
+  }
+  &__item {
+    width: auto;
+  }
+  &__link {
+    font-size: 18px;
+  }
 }

@@ -82,15 +82,6 @@ input[type="radio"] {
   background-color: $white;
 }
 
-@keyframes disappear {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-
 .menu-link {
   position: relative;
   display: block;
@@ -112,8 +103,46 @@ input[type="radio"] {
     color: $more-pale;
     right: 20px;
   }
-
   &:hover {
     color: $warm;
+  }
+  &--openable {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    height: 40px;
+    line-height: 40px;
+    &:after {
+      right: 14px;
+    }
+  }
+}
+
+.unscrollable {
+  overflow: hidden;
+}
+
+@keyframes visible {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes disappear {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    display: none;
+  }
+}
+@keyframes translate {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
   }
 }

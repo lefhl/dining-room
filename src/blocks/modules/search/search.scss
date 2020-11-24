@@ -57,9 +57,11 @@
     padding: 20px 40px 45px 15px;
     cursor: auto;
     display: none;
+    z-index: 18;
 
     &.active {
       display: block;
+      animation: visible 0.3s linear;
     }
   }
   &__categories-item {
@@ -91,6 +93,7 @@
     background-color: $dark-translucent-bg;
     &.active {
       display: block;
+      animation: visible 0.5s linear;
     }
   }
   &__results {
@@ -142,6 +145,11 @@
   }
   &__distributors {
     margin-left: auto;
+    transition: transform 1s ease;
+    overflow: hidden;
+    &:hover img {
+      animation: translate 0.2s linear;
+    }
   }
   &__cart {
     position: relative;
@@ -149,12 +157,13 @@
     padding-left: 16px;
     box-sizing: border-box;
     margin-left: 10px;
+    transition: background-color 0.2s;
 
     &:after,
     &:before {
-      content: "";
+      @include pseudo;
       position: absolute;
-      height: 17px;
+      height: 14px;
       right: 0;
       width: 100%;
       background-color: inherit;

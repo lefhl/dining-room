@@ -6,6 +6,16 @@
   display: block;
   content: $content;
 }
+@mixin bg-slide($color: red) {
+  position: absolute;
+  width: 105%;
+  height: 100%;
+  background-color: $color;
+  top: 0;
+  left: -105%;
+  z-index: -1;
+  transition: 0.2s;
+}
 
 @mixin dark-theme {
   background-color: $dark-theme;

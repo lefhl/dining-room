@@ -1,6 +1,6 @@
 .menu {
   position: relative;
-  z-index: 3;
+  z-index: 16;
   background-color: $white;
   box-shadow: 0px 7px 18px 0px rgba(0, 0, 0, 0.11);
 
@@ -21,7 +21,7 @@
   &__submenu--small {
     background-color: $white;
     position: absolute;
-    z-index: 2;
+    z-index: 15;
     display: flex;
     font-weight: 100;
     font-size: 18px;
@@ -29,6 +29,8 @@
 
     &.active {
       display: flex;
+      opacity: 1;
+      animation: visible 0.5s linear;
     }
   }
   &__item-products,
@@ -39,6 +41,15 @@
 
     &--small {
       padding-bottom: 0;
+    }
+  }
+  &__item-product {
+    &:first-child .menu-link {
+      border-top: none;
+    }
+    .menu-link {
+      padding: 10px 100px 10px 90px;
+      // padding-left: 90px;
     }
   }
   &__kinds-and-countries {
@@ -57,39 +68,52 @@
     border-bottom: 1px solid $bg;
   }
   &__item-countries {
-    padding-top: 40px;
+    padding-top: 30px;
   }
   &__kinds-link {
     display: block;
+    padding-top: 5px;
     padding-left: 30px;
     padding-right: 60px;
 
     &--kind {
-      padding-top: 8px;
-      padding-bottom: 8px;
+      height: 30px;
+      line-height: 30px;
+      font-size: 18px;
+      font-weight: 100;
     }
     &--country {
       display: flex;
-      padding-top: 5px;
-      padding-bottom: 5px;
+      align-items: flex-end;
+      height: 30px;
+      line-height: 30px;
+      font-size: 18px;
+      font-weight: 100;
     }
   }
   &__cat-subtitle {
     color: $pale;
-    font-size: 16px;
+    font-size: 18px;
+    font-weight: 100;
     padding-bottom: 5px;
   }
   &__flag {
     margin-right: 5px;
   }
+  &__item-brands {
+    padding-left: 20px;
+    padding-top: 39px;
+  }
   &__item-brand {
     padding-left: 30px;
-    padding-right: 120px;
+    padding-right: 126px;
   }
   &__brand-link {
     display: block;
-    padding-top: 2px;
-    font-size: 22px;
+    // padding-top: 2px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 24px;
     transition-duration: 0.25s;
 
     &:hover {
@@ -98,7 +122,9 @@
   }
   &__promo {
     background-color: $warm;
-    padding: 30px 40px 0 40px;
+    // padding: 30px 40px 0 40px;
+    padding-top: 30px;
+    min-width: 440px;
     color: $white;
     text-align: center;
 
@@ -110,6 +136,7 @@
     padding-top: 30px;
     padding-bottom: 20px;
     font-size: 24px;
+    font-weight: 100;
   }
   &__btn {
     background-color: $black;
@@ -124,7 +151,7 @@
   &__overlay {
     display: none;
     position: absolute;
-    z-index: 1;
+    z-index: 10;
     background-color: $dark-translucent-bg;
     width: 100vw;
     height: 100vh;
@@ -132,10 +159,43 @@
 
     &.active {
       display: block;
+      animation: visible 0.5s linear;
     }
   }
+  // МАЛЕНЬКОЕ ПОДМЕНЮ
   &__submenu--small {
     display: none;
+    .menu__item-products {
+      padding-bottom: 22px;
+    }
+    .menu__kinds-and-countries {
+      padding-right: 80px;
+    }
+    .menu-link {
+      padding-right: 125px;
+    }
+    .menu__item-kinds {
+      padding-bottom: 0;
+    }
+    .menu__item-brands {
+      padding-left: 0;
+    }
+    .menu__kinds-link {
+      padding-left: 33px;
+    }
+    .menu__promo--small {
+      padding-top: 56px;
+    }
+    .menu__promo-subtitle {
+      padding-top: 37px;
+      padding-bottom: 15px;
+    }
+    .menu__btn--small {
+      display: inline-block;
+      width: 129px;
+      height: 35px;
+      line-height: 35px;
+      padding: 0;
+    }
   }
-  // МАЛЕНЬКОЕ ПОДМЕНЮ
 }
