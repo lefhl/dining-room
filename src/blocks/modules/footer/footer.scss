@@ -9,7 +9,7 @@
   &__menu-title {
     padding-top: 90px;
     padding-bottom: 25px;
-    font-size: 24px;
+    font-size: $title;
     font-weight: 100;
     color: $pale;
   }
@@ -45,7 +45,7 @@
     }
   }
   &__brand-name {
-    font-size: 24px;
+    font-size: $title;
     margin-top: 5px;
     line-height: 18px;
   }
@@ -59,7 +59,7 @@
     justify-content: space-between;
   }
   &__developer {
-    font-size: 18px;
+    font-size: $big-text;
     font-weight: 100;
   }
 }

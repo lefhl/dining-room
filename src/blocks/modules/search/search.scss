@@ -1,9 +1,12 @@
 .search {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 0;
+  background-color: $bg;
+  &__wrapper {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+  }
 
   // ЛОГО
 
@@ -191,5 +194,33 @@
   &__cart-cost {
     font-weight: normal;
     color: #000;
+  }
+
+  @media (max-width: 1600px) {
+    &__search-container {
+      max-width: 712px;
+    }
+  }
+  @media (max-width: 1450px) {
+    &__logo {
+      padding-right: 45px;
+    }
+    &__search-container {
+      max-width: 645px;
+    }
+  }
+  @media (max-width: 1350px) {
+    &__search-container {
+      max-width: 545px;
+    }
+    &__link {
+      font-size: $text - 2;
+    }
+    &__cart {
+      justify-content: flex-end;
+      max-width: 128px;
+      padding-left: 0;
+      margin-left: 0;
+    }
   }
 }

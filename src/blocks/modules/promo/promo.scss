@@ -1,12 +1,12 @@
 .promo {
   display: flex;
-  padding-top: 20px;
+  padding-top: 240px;
 
   &__menu-title {
     padding-top: 30px;
     padding-bottom: 10px;
     padding-left: 25px;
-    font-size: 24px;
+    font-size: $title;
     color: $warm;
     white-space: nowrap;
   }
@@ -46,21 +46,21 @@
     color: $pale;
   }
   &__slide-title {
-    font-size: 40px;
+    font-size: $big-title;
     line-height: 45px;
     padding-bottom: 13px;
   }
   &__slide-subtitle {
     padding-bottom: 72px;
     font-weight: 100;
-    font-size: 18px;
+    font-size: $big-text;
   }
   &__link-button {
     color: $white;
     padding: 7px 20px;
     background-color: $warm;
     border-radius: 17px;
-    font-size: 18px;
+    font-size: $big-text;
     transition: background-color 0.2s;
     cursor: pointer;
 
@@ -88,11 +88,11 @@
   }
   &__sales-caption {
     margin-top: 5px;
-    font-size: 18px;
+    font-size: $big-text;
     font-weight: 100;
   }
   &__sales-title {
-    font-size: 40px;
+    font-size: $big-title;
     padding-bottom: 20px;
   }
   &__sales-link {

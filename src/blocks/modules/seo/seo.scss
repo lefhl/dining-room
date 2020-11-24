@@ -7,21 +7,20 @@
 
   &__title {
     max-width: 800px;
-    font-size: 40px;
+    font-size: $big-title;
     padding-bottom: 30px;
   }
   &__text {
-    font-size: 18px;
+    font-size: $big-text;
     font-weight: 100;
   }
   &__subtitle {
     padding-top: 40px;
     padding-bottom: 30px;
-    font-size: 40px;
+    font-size: $big-title;
     font-weight: 100;
   }
   &__content {
-    // padding-right: 270px;
     flex-basis: 830px;
   }
   &__break {
@@ -37,7 +36,7 @@
     padding-bottom: 30px;
   }
   &__brand-name {
-    font-size: 40px;
+    font-size: $big-title;
   }
   &__logo-subtitle {
     padding-bottom: 30px;
@@ -45,11 +44,11 @@
     font-weight: 100;
   }
   &__features-title {
-    font-size: 24px;
+    font-size: $title;
   }
   &__features-subtitle {
     padding-bottom: 26px;
-    font-size: 18px;
+    font-size: $big-text;
     font-weight: 100;
     color: $pale;
   }
@@ -57,7 +56,7 @@
     font-weight: 100;
   }
   &__feature {
-    font-size: 18px;
+    font-size: $big-text;
   }
   &__features {
     font-weight: 100;
@@ -72,7 +71,7 @@
     line-height: 50px;
     border-radius: 50%;
     font-weight: 100;
-    font-size: 24px;
+    font-size: $title;
     cursor: pointer;
     transition: box-shadow 0.2s, color 0.3s;
 

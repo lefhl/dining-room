@@ -6,6 +6,9 @@ const body = document.querySelector("body");
 const small_menu_list_id = ["1", "3", "5", "7", "9", "11"];
 let current_menu_item = 0;
 
+// Прячем меню при скролле вверх и показываем в обратном случае
+let previous_top_offset = 0;
+
 menu.addEventListener("click", (e) => {
   if (!e.target.closest(".menu__item")) return;
 
@@ -59,3 +62,15 @@ const toggleBigMenu = (submenu) => {
   body.classList.add("unscrollable");
   current_menu_item = submenu.closest(".menu__item").dataset.id;
 };
+
+window.addEventListener("scroll", () => {
+  let current_top_offset = pageYOffset;
+  if (previous_top_offset - current_top_offset < 0) {
+    menu.style.display = "none";
+    menu.classList.remove("active");
+  } else {
+    menu.style.display = "block";
+    menu.classList.add("active");
+  }
+  previous_top_offset = current_top_offset;
+});

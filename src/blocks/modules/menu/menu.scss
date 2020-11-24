@@ -13,6 +13,16 @@
     padding-top: 10px;
     padding-bottom: 10px;
     cursor: pointer;
+    color: lighten($black, 15%);
+
+    &:hover {
+      color: darken($black, 15%);
+    }
+  }
+
+  &.active {
+    z-index: 5;
+    animation: translate 0.7s ease-in;
   }
 
   // БОЛЬШОЕ ПОДМЕНЮ
@@ -24,7 +34,7 @@
     z-index: 15;
     display: flex;
     font-weight: 100;
-    font-size: 18px;
+    font-size: $big-text;
     display: none;
 
     &.active {
@@ -49,7 +59,6 @@
     }
     .menu-link {
       padding: 10px 100px 10px 90px;
-      // padding-left: 90px;
     }
   }
   &__kinds-and-countries {
@@ -79,7 +88,7 @@
     &--kind {
       height: 30px;
       line-height: 30px;
-      font-size: 18px;
+      font-size: $big-text;
       font-weight: 100;
     }
     &--country {
@@ -87,13 +96,13 @@
       align-items: flex-end;
       height: 30px;
       line-height: 30px;
-      font-size: 18px;
+      font-size: $big-text;
       font-weight: 100;
     }
   }
   &__cat-subtitle {
     color: $pale;
-    font-size: 18px;
+    font-size: $big-text;
     font-weight: 100;
     padding-bottom: 5px;
   }
@@ -110,10 +119,9 @@
   }
   &__brand-link {
     display: block;
-    // padding-top: 2px;
     height: 30px;
     line-height: 30px;
-    font-size: 24px;
+    font-size: $title;
     transition-duration: 0.25s;
 
     &:hover {
@@ -122,7 +130,6 @@
   }
   &__promo {
     background-color: $warm;
-    // padding: 30px 40px 0 40px;
     padding-top: 30px;
     min-width: 440px;
     color: $white;
@@ -135,7 +142,7 @@
   &__promo-subtitle {
     padding-top: 30px;
     padding-bottom: 20px;
-    font-size: 24px;
+    font-size: $title;
     font-weight: 100;
   }
   &__btn {

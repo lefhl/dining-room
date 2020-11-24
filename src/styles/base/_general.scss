@@ -5,9 +5,10 @@
 }
 
 body {
-  width: 1920px;
+  // width: 1920px;
   font-family: "MyriadPro", sans-serif;
   background-color: $bg;
+  overflow-x: hidden;
 }
 
 h1,
@@ -50,6 +51,26 @@ button {
   &--small {
     width: 1400px;
     margin: 0 auto;
+  }
+
+  @media (max-width: 1600px) {
+    width: 1400px;
+    &--small {
+      width: 1300px;
+      margin: 0 auto;
+    }
+  }
+  @media (max-width: 1450px) {
+    width: 1250px;
+    &--small {
+      width: 1150px;
+    }
+  }
+  @media (max-width: 1350px) {
+    width: 1150px;
+    &--small {
+      width: 1050px;
+    }
   }
 }
 
@@ -140,9 +161,18 @@ input[type="radio"] {
 }
 @keyframes translate {
   from {
-    transform: translateY(100%);
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  50% {
+    transform: 50%;
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
   }
   to {
     transform: translateY(0);
+    opacity: 1;
   }
 }
