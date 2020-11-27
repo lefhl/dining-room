@@ -80,4 +80,14 @@
       box-shadow: 1px 1px 10px #000;
     }
   }
+
+  @media (max-width: 1350px) {
+    &__content {
+      flex-basis: 60%;
+    }
+  }
+  @media (max-width: 1050px) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
 }

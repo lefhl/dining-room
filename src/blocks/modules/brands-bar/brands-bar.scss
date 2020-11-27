@@ -16,4 +16,10 @@
   &__link {
     font-size: $big-text;
   }
+  @media (max-width: 1200px) {
+    &__slider {
+      padding-left: 45px;
+      padding-right: 45px;
+    }
+  }
 }

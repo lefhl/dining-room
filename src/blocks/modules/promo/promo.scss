@@ -107,7 +107,36 @@
       right: -20px;
     }
   }
+  @media (max-width: 1350px) {
+    &__slide {
+      padding-left: 35px;
+    }
+  }
+  @media (max-width: 1200px) {
+    &__menu {
+      min-width: 250px;
+    }
+    &__menu-title {
+      white-space: normal;
+    }
+    &__slider {
+      height: auto;
+    }
+    &__sales {
+      min-width: auto;
+      flex-basis: 250px;
+      margin-left: 25px;
+    }
+    &__slide {
+      overflow: hidden;
+      width: 100%;
+    }
+    &__slide-title {
+      font-size: $big-title - 10px;
+    }
+  }
 }
+
 .swiper-pagination {
   display: flex;
   align-items: center;

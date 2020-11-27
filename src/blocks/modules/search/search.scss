@@ -126,6 +126,15 @@
     background-color: $warm;
     border-radius: 0 5px 5px 0;
     cursor: pointer;
+    transition: background 0.3s;
+
+    picture {
+      height: 21px;
+    }
+
+    &:hover {
+      background: lighten($warm, 10%);
+    }
   }
 
   // ПОСТАВЩИКИ И КОРЗИНА
@@ -221,6 +230,31 @@
       max-width: 128px;
       padding-left: 0;
       margin-left: 0;
+    }
+  }
+  @media (max-width: 1200px) {
+    &__search-container {
+      max-width: 474px;
+    }
+    &__cart {
+      max-width: 100px;
+    }
+  }
+  @media (max-width: 1050px) {
+    &__logo {
+      padding-left: 90px;
+    }
+    &__filter {
+      display: none;
+    }
+    &__search-line {
+      display: none;
+    }
+    &__btn {
+      background-color: transparent;
+      img {
+        height: 21px;
+      }
     }
   }
 }

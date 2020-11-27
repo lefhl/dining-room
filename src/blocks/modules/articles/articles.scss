@@ -136,4 +136,33 @@
       }
     }
   }
+  @media (max-width: 1200px) {
+    &__main {
+      flex-direction: column;
+      align-items: center;
+    }
+    &__article {
+      &--main,
+      &--secondary {
+        width: 100%;
+      }
+      &--main {
+        padding-right: 0;
+        padding-left: 0;
+        padding-bottom: 55px;
+        & > a {
+          text-align: center;
+        }
+      }
+    }
+    &__secondary {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  @media (max-width: 1050px) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
 }

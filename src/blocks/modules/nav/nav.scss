@@ -107,4 +107,34 @@
   @media (max-width: 1350px) {
     font-size: $text - 2;
   }
+  @media (max-width: 1200px) {
+    &__item:nth-child(11) {
+      margin-left: 15px;
+    }
+    &__item--tel {
+      span {
+        display: none;
+      }
+    }
+  }
+  @media (max-width: 1050px) {
+    position: absolute;
+    height: 0;
+    width: 100%;
+    transition: height 0.3s;
+    overflow: hidden;
+    z-index: 19;
+    &.active {
+      height: 450px;
+    }
+
+    &__menu {
+      flex-direction: column;
+    }
+    &__link {
+      padding: 0;
+      font-size: $big-text;
+      text-align: center;
+    }
+  }
 }

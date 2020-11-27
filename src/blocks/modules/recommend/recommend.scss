@@ -88,4 +88,18 @@
   &__secondary-article-content--small {
     padding-right: 60px;
   }
+
+  @media (max-width: 1200px) {
+    &__main-item {
+      max-width: 380px;
+
+      img {
+        max-width: 100%;
+        transform: translateX(0);
+      }
+    }
+    &__secondary-items {
+      max-width: 500px;
+    }
+  }
 }

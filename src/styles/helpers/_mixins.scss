@@ -16,6 +16,24 @@
   z-index: -1;
   transition: 0.2s;
 }
+@mixin sizeXY($x, $y) {
+  width: $x;
+  height: $y;
+}
+@mixin circle($diameter) {
+  width: $diameter;
+  height: $diameter;
+  border-radius: 50%;
+}
+@mixin line-size($w, $h, $mb) {
+  span {
+    width: $w;
+    height: $h;
+    &:not(:last-child) {
+      margin-bottom: $mb;
+    }
+  }
+}
 
 @mixin dark-theme {
   background-color: $dark-theme;

@@ -1,6 +1,6 @@
 const mail = document.querySelector(".mail");
 const copy_mail_btn = document.querySelector(".mail .nav__btn");
-const phone_block = document.querySelector(".nav__item-tel");
+const phone_block = document.querySelector(".nav__item--tel");
 
 phone_block.addEventListener("click", () => {
   const popup = document.querySelector(".popup");

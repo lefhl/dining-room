@@ -36,6 +36,7 @@ const toggleSmallMenu = (submenu) => {
   if (submenu.closest(".menu__item").dataset.id == current_menu_item) {
     submenu_s.classList.remove("active");
     overlay.classList.remove("active");
+    body.classList.remove("unscrollable");
     current_menu_item = 0;
     return;
   }

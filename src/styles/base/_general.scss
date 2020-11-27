@@ -72,6 +72,12 @@ button {
       width: 1050px;
     }
   }
+  @media (max-width: 1200px) {
+    width: 1000px;
+    &--small {
+      width: 900px;
+    }
+  }
 }
 
 .clicked {
