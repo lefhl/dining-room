@@ -36,8 +36,15 @@
     </li>
     <li class="nav__item nav__item--img nav__item--tel">
       <a href="#" class="nav__link">
-        <img src="../../../img/phone.png" alt="phone" class="nav__img--2" />
+        <picture>
+          <source
+            srcset="../../../img/phone-mobile.png"
+            media="(max-width: 1050px)"
+          />
+          <img src="../../../img/phone.png" alt="phone" class="nav__img--2" />
+        </picture>
         <span>8 495 790 72-05</span>
+        @@include("../popup/popup.html")
       </a>
     </li>
   </ul>

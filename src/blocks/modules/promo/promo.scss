@@ -27,6 +27,9 @@
       border-top: none !important;
     }
   }
+  &__menu-item:last-child {
+    display: none;
+  }
   &__slider {
     height: 478px;
   }
@@ -133,6 +136,48 @@
     }
     &__slide-title {
       font-size: $big-title - 10px;
+    }
+  }
+  @media (max-width: 1050px) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 95px;
+
+    &__menu {
+      margin-right: 0;
+    }
+    &__menu-item:not(:last-child),
+    &__menu-title {
+      display: none;
+    }
+    &__menu-item:last-child {
+      display: block;
+      font-size: $title + 6;
+      font-weight: 100;
+    }
+    &__slider {
+      width: 100%;
+    }
+    &__sales {
+      width: auto;
+      padding-left: 65px;
+      min-height: 475px;
+      padding-top: 0;
+      margin-right: 25px;
+      margin-top: 25px;
+      img {
+        height: 146px;
+      }
+    }
+    &__sales-caption {
+      font-size: $big-text + 7;
+    }
+    &__sales-title {
+      font-size: $big-title + 10;
+    }
+    &__sales-link {
+      font-size: $title;
     }
   }
 }

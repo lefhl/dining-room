@@ -14,6 +14,9 @@ const cart_text_arr = cart_value.textContent.split("");
 const cart = document.querySelector(".search__cart");
 const cart_icon = cart.querySelector(".search__icon");
 
+// Телефон
+const search_phone_block = document.querySelector(".search__phone");
+
 results.style.left =
   search_line.getBoundingClientRect().left + pageXOffset + "px";
 results.style.width = search_line.getBoundingClientRect().width + "px";
@@ -90,4 +93,14 @@ cart.addEventListener("mouseenter", () => {
 });
 cart.addEventListener("mouseleave", () => {
   cart_icon.src = "../../../img/cart.png";
+});
+
+// Открываем форму обратной связи по клику на телефон
+
+search_phone_block.addEventListener("click", () => {
+  const popup = document.querySelector(".popup");
+  const overlay = document.querySelector(".overlay");
+
+  popup.classList.add("active");
+  overlay.classList.add("active");
 });

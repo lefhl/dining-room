@@ -9,6 +9,8 @@ let current_menu_item = 0;
 // Прячем меню при скролле вверх и показываем в обратном случае
 let previous_top_offset = 0;
 
+// общая функция, которая будет показывать большое или маленькое меню, в зависимости от дата-атрибута id
+
 menu.addEventListener("click", (e) => {
   if (!e.target.closest(".menu__item")) return;
 
@@ -24,6 +26,8 @@ menu.addEventListener("click", (e) => {
   toggleBigMenu(e.target);
 });
 
+// удаляем все активные классы при клике на фон
+
 overlay.addEventListener("click", () => {
   submenu_b.classList.remove("active");
   submenu_s.classList.remove("active");
@@ -31,6 +35,8 @@ overlay.addEventListener("click", () => {
   body.classList.remove("unscrollable");
   current_menu_item = 0;
 });
+
+// логика открытия и закрытия маленького подменю
 
 const toggleSmallMenu = (submenu) => {
   if (submenu.closest(".menu__item").dataset.id == current_menu_item) {
@@ -48,6 +54,8 @@ const toggleSmallMenu = (submenu) => {
   current_menu_item = submenu.closest(".menu__item").dataset.id;
 };
 
+// логика открытия и закрытия большого подменю
+
 const toggleBigMenu = (submenu) => {
   if (submenu.closest(".menu__item").dataset.id == current_menu_item) {
     submenu_b.classList.remove("active");
@@ -64,7 +72,10 @@ const toggleBigMenu = (submenu) => {
   current_menu_item = submenu.closest(".menu__item").dataset.id;
 };
 
+// прячем и показываем меню при скролле
+
 window.addEventListener("scroll", () => {
+  if (document.body.clientWidth < 1050) return;
   let current_top_offset = pageYOffset;
   if (previous_top_offset - current_top_offset < 0) {
     menu.style.display = "none";

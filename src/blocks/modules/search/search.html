@@ -4,6 +4,7 @@
       <img src="../../../img/logo.png" alt="logo" class="search__logo-img" />
       <p class="search__logo-text">
         Столовая.<span class="search__text-uppercase">ру</span>
+        <span class="search__logo-description">Создание пищеблоков</span>
       </p>
     </div>
     <div class="search__search-container">
@@ -42,16 +43,23 @@
         </picture>
       </button>
     </div>
+
     <div class="search__distributors search__link">
       <img src="../../../img/distr.png" alt="" class="search__icon" />
       <p class="search__description">Мы на портале поставщиков</p>
     </div>
     <div class="search__cart search__link">
-      <img
-        src="../../../img/cart.png"
-        alt="cart"
-        class="search__icon search__icon--cart"
-      />
+      <picture>
+        <source
+          srcset="../../../img/cart-mobile.png"
+          media="(max-width: 1050px)"
+        />
+        <img
+          src="../../../img/cart.png"
+          alt="cart"
+          class="search__icon search__icon--cart"
+        />
+      </picture>
       <p class="search__description">
         <span class="search__cart-title">Сумма</span>
         <span class="search__cart-cost">150000</span>

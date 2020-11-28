@@ -22,6 +22,9 @@
     font-size: 33px;
     align-self: flex-end;
   }
+  &__logo-description {
+    display: none;
+  }
   &__text-uppercase {
     text-transform: uppercase;
     line-height: 1;
@@ -155,6 +158,9 @@
       transform: translateY(4px);
     }
   }
+  &__phone {
+    display: none;
+  }
   &__distributors {
     margin-left: auto;
     transition: transform 1s ease;
@@ -241,19 +247,79 @@
     }
   }
   @media (max-width: 1050px) {
+    background-color: $header-mobile-bg;
+    &__wrapper {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
     &__logo {
-      padding-left: 90px;
+      padding-left: 115px;
+      img {
+        height: 55px;
+      }
+    }
+    &__logo-text {
+      font-size: 30px;
+    }
+    &__logo-description {
+      display: block;
+      font-size: 18px;
+      font-weight: 100;
     }
     &__filter {
       display: none;
+    }
+    &__search-container {
+      max-width: none;
+      width: auto;
+      margin-left: auto;
+      margin-right: 60px;
     }
     &__search-line {
       display: none;
     }
     &__btn {
       background-color: transparent;
+      picture {
+        height: auto;
+      }
       img {
-        height: 21px;
+        height: 40px;
+      }
+      &:hover {
+        background-color: transparent;
+      }
+    }
+    &__phone {
+      // position: relative;
+      display: block;
+      margin: 0px 15px;
+      img {
+        height: 40px;
+      }
+      .popup {
+        z-index: 21;
+        top: 50%;
+        right: 0;
+      }
+    }
+    &__distributors {
+      display: none;
+    }
+    &__cart {
+      max-width: 135px;
+      img {
+        height: 40px;
+      }
+
+      &:hover,
+      &:hover &:after,
+      &:hover &:before {
+        background-color: transparent;
+        color: $pale;
+      }
+      &:hover .search__cart-cost {
+        color: $black;
       }
     }
   }

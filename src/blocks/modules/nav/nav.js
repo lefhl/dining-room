@@ -1,20 +1,26 @@
+// mail copy button
+
 const mail = document.querySelector(".mail");
 const copy_mail_btn = document.querySelector(".mail .nav__btn");
+
+// popup
+
 const phone_block = document.querySelector(".nav__item--tel");
+const overlay = document.querySelector(".overlay");
+const popup = document.querySelector(".popup");
+const popup_close = popup.querySelector(".popup__close");
 
-phone_block.addEventListener("click", () => {
-  const popup = document.querySelector(".popup");
-  const popup_inner = document.querySelector(".popup__container");
+phone_block.addEventListener("click", (e) => open_phone(e));
 
+const open_phone = (e) => {
+  if (e.target.classList.contains("popup__close")) return;
   popup.classList.add("active");
+  overlay.classList.add("active");
+};
 
-  popup_inner.style.marginLeft =
-    phone_block.getBoundingClientRect().left +
-    phone_block.getBoundingClientRect().width -
-    popup_inner.getBoundingClientRect().width +
-    "px";
-
-  popup.style.top = phone_block.clientHeight + "px";
+popup_close.addEventListener("click", () => {
+  popup_close.closest(".popup").classList.remove("active");
+  overlay.classList.remove("active");
 });
 
 mail.addEventListener("click", (e) => {

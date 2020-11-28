@@ -38,6 +38,19 @@
   &__item:last-child &__link {
     padding-right: 0;
   }
+  &__item--tel {
+    position: relative;
+
+    .popup {
+      top: 100%;
+      right: 0;
+      z-index: 21;
+      width: max-content;
+    }
+    .popup__phone {
+      color: $top-header-color !important;
+    }
+  }
   &__item--img {
     display: flex;
     align-items: center;
@@ -122,7 +135,7 @@
     height: 0;
     width: 100%;
     transition: height 0.3s;
-    overflow: hidden;
+    // overflow: hidden;
     z-index: 19;
     &.active {
       height: 450px;
@@ -131,10 +144,30 @@
     &__menu {
       flex-direction: column;
     }
+    &.active {
+      overflow: hidden;
+      .nav__link {
+        display: block;
+      }
+    }
     &__link {
       padding: 0;
       font-size: $big-text;
       text-align: center;
+      display: none;
+    }
+    &__item.mail {
+      display: none;
+    }
+    &__item--tel {
+      width: 40px;
+      margin-left: auto !important;
+      margin-right: 143px;
+      margin-top: 25px;
+
+      img {
+        height: 40px;
+      }
     }
   }
 }

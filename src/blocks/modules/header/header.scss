@@ -9,11 +9,11 @@
 
   @media (max-width: 1050px) {
     .burger {
-      @include circle(50px);
-      @include line-size(20px, 2px, 7px);
+      @include circle(73px);
+      @include line-size(30px, 2px, 10px);
       position: absolute;
       left: 20px;
-      top: 10px;
+      top: 12px;
       display: flex;
       z-index: 20;
     }
