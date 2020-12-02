@@ -80,6 +80,14 @@ button {
   }
   @media (max-width: 1050px) {
     width: auto;
+    &--small {
+      width: 90%;
+    }
+  }
+  @media (max-width: 460px) {
+    &--small {
+      width: 95%;
+    }
   }
 }
 

@@ -18,7 +18,7 @@ const swiper = new Swiper(".swiper-container.promo__slider", {
   },
 });
 
-const brands_swiper = new Swiper(".swiper-container.brands-bar", {
-  slidesPerView: "auto",
-  spaceBetween: 0,
-});
+// const brands_swiper = new Swiper(".swiper-container.brands-bar", {
+//   slidesPerView: "auto",
+//   spaceBetween: 0,
+// });

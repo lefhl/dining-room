@@ -104,7 +104,11 @@
     cursor: pointer;
     z-index: 1;
   }
-
+  @media (min-width: 1050px) {
+    picture {
+      height: 40px;
+    }
+  }
   @media (max-width: 1600px) {
     &__link {
       padding-right: 15px;
@@ -146,6 +150,7 @@
     }
     &.active {
       overflow: hidden;
+      animation: border 2s;
       .nav__link {
         display: block;
       }
@@ -168,6 +173,9 @@
       img {
         height: 40px;
       }
+    }
+    .popup .popup__container {
+      top: 55px;
     }
   }
 }

@@ -94,13 +94,3 @@ cart.addEventListener("mouseenter", () => {
 cart.addEventListener("mouseleave", () => {
   cart_icon.src = "../../../img/cart.png";
 });
-
-// Открываем форму обратной связи по клику на телефон
-
-search_phone_block.addEventListener("click", () => {
-  const popup = document.querySelector(".popup");
-  const overlay = document.querySelector(".overlay");
-
-  popup.classList.add("active");
-  overlay.classList.add("active");
-});

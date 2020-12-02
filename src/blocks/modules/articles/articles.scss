@@ -100,9 +100,12 @@
 
     &:after {
       @include pseudo;
-      @include bg-slide($warm);
+      transform-origin: 0 50%;
+      width: 100%;
+      transform: scaleX(0);
     }
     &:hover:after {
+      @include bg-slide($warm);
       left: 0;
     }
     &:hover {

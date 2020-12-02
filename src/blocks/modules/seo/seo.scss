@@ -89,5 +89,9 @@
   @media (max-width: 1050px) {
     padding-top: 100px;
     padding-bottom: 100px;
+
+    &__aside {
+      padding-right: 0;
+    }
   }
 }
