@@ -168,4 +168,7 @@
     padding-top: 100px;
     padding-bottom: 100px;
   }
+  @media (max-width: 750px) {
+    display: none;
+  }
 }

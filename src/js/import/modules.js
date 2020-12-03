@@ -5,4 +5,5 @@ import "%modules%/search/search";
 import "%modules%/popup/popup";
 import "%modules%/menu/menu";
 import "%modules%/promo/promo";
+import "%modules%/seo/seo";
 import "%modules%/footer/footer";

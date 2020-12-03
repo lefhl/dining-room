@@ -94,4 +94,24 @@
       padding-right: 0;
     }
   }
+  @media (max-width: 750px) {
+    &__content {
+      flex-basis: 100%;
+    }
+    &__aside {
+      display: none;
+    }
+    &__content-part:last-child {
+      height: 0;
+      visibility: hidden;
+      transform: scaleY(0);
+      transition: transform 0.4s, height 0.4s;
+      transform-origin: top center;
+      &.active {
+        visibility: visible;
+        height: auto;
+        transform: scaleY(1);
+      }
+    }
+  }
 }
