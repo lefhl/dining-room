@@ -150,6 +150,9 @@
       width: 200px;
     }
   }
+  @media (max-width: 750px) {
+    padding-top: 100px;
+  }
   @media (max-width: 670px) {
     &__main-item {
       padding-right: 30px;
