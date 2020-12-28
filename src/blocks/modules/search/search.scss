@@ -33,7 +33,7 @@
   // ПОИСК
 
   &__search-container {
-    // position: relative;
+    position: relative;
     display: flex;
     max-width: 885px;
     width: 100%;
@@ -92,23 +92,21 @@
     flex-grow: 1;
     height: 35px;
   }
-  &__results-wrapper {
-    display: none;
-    width: 100vw;
-    height: 100vh;
-    background-color: $dark-translucent-bg;
-    &.active {
-      display: block;
-      animation: visible 0.5s linear;
-    }
-  }
   &__results {
-    position: relative;
-    z-index: 1;
+    display: none;
+    opacity: 0;
+    top: calc(100% + 2px);
+    position: absolute;
     padding-left: 30px;
     padding-right: 30px;
     background-color: $white;
     box-sizing: border-box;
+    transition: 0.3s;
+    z-index: 22;
+    &.active {
+      display: block;
+      opacity: 1;
+    }
   }
   &__result {
     width: 100%;
@@ -254,6 +252,7 @@
     }
     &__logo {
       padding-left: 115px;
+      padding-right: 0;
       img {
         height: 55px;
       }
@@ -266,17 +265,44 @@
       font-size: 18px;
       font-weight: 100;
     }
-    &__filter {
-      display: none;
-    }
     &__search-container {
       max-width: none;
       width: auto;
       margin-left: auto;
       margin-right: 60px;
+      transition: all 0.3s;
+      cursor: pointer;
+
+      &.active {
+        padding-top: 30px;
+        position: absolute;
+        justify-content: center;
+        width: 100vw;
+        height: 200vh;
+        top: 0;
+        margin: 0;
+        background-color: $dark-translucent-bg;
+        z-index: 20;
+      }
+    }
+    &__search-container.active &__filter {
+      display: flex;
+    }
+    &__filter {
+      display: none;
+    }
+    &__search-container.active &__search-line {
+      display: block;
     }
     &__search-line {
       display: none;
+      max-width: 70%;
+    }
+    &__search-container.active &__btn {
+      picture {
+        display: none;
+      }
+      background: url("../../../img/loop.png") no-repeat center, $warm;
     }
     &__btn {
       background-color: transparent;
@@ -290,8 +316,11 @@
         background-color: transparent;
       }
     }
+    &__results {
+      top: 66px;
+      width: auto;
+    }
     &__phone {
-      // position: relative;
       display: block;
       margin: 0px 15px;
       img {
@@ -307,6 +336,7 @@
       display: none;
     }
     &__cart {
+      margin-right: 20px;
       max-width: 135px;
       img {
         height: 40px;
@@ -321,6 +351,30 @@
       &:hover .search__cart-cost {
         color: $black;
       }
+    }
+  }
+  @media (max-width: 650px) {
+    &__cart {
+      max-width: none;
+      width: auto;
+    }
+    &__description {
+      display: none;
+    }
+    .active &__btn {
+      margin-left: 0;
+    }
+    &__btn {
+      margin-left: auto;
+    }
+    &__wrapper {
+      min-height: 55px;
+      box-sizing: content-box;
+    }
+  }
+  @media (max-width: 550px) {
+    &__logo {
+      display: none;
     }
   }
 }

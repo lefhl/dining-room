@@ -98,15 +98,25 @@
     border-radius: 17px;
     font-weight: 100;
 
-    &:after {
-      @include pseudo;
-      transform-origin: 0 50%;
-      width: 100%;
+    &:before {
+      transform-origin: center right;
       transform: scaleX(0);
     }
-    &:hover:after {
-      @include bg-slide($warm);
+    &:hover:before {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+    &:before {
+      @include pseudo;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
       left: 0;
+      inset: 0 0 0 0;
+      background: $warm;
+      z-index: -1;
+      transition: transform 0.3s ease;
     }
     &:hover {
       color: $white;

@@ -139,14 +139,13 @@
     height: 0;
     width: 100%;
     transition: height 0.3s;
-    // overflow: hidden;
     z-index: 19;
     &.active {
       height: 450px;
     }
-
     &__menu {
       flex-direction: column;
+      height: 0;
     }
     &.active {
       overflow: hidden;
@@ -167,8 +166,8 @@
     &__item--tel {
       width: 40px;
       margin-left: auto !important;
-      margin-right: 143px;
-      margin-top: 25px;
+      margin-right: 163px;
+      margin-top: 26px;
 
       img {
         height: 40px;
@@ -176,6 +175,11 @@
     }
     .popup .popup__container {
       top: 55px;
+    }
+  }
+  @media (max-width: 650px) {
+    &__item--tel {
+      margin-right: 86px;
     }
   }
 }
