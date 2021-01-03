@@ -56,19 +56,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
   distr.addEventListener("mouseenter", () => {
     let icon = distr.querySelector(".search__icon");
-    icon.src = "../../../img/distr_hover.png";
+    icon.src = "./img/distr_hover.png";
   });
 
   distr.addEventListener("mouseleave", () => {
     let icon = distr.querySelector(".search__icon");
-    icon.src = "../../../img/distr.png";
+    icon.src = "./img/distr.png";
   });
 
   cart.addEventListener("mouseenter", () => {
-    cart_icon.src = "../../../img/cart-hover.png";
+    cart_icon.src = "./img/cart-hover.png";
   });
   cart.addEventListener("mouseleave", () => {
-    cart_icon.src = "../../../img/cart.png";
+    cart_icon.src = "./img/cart.png";
   });
 
   search_container.addEventListener('click', (e) => {
