@@ -1,11 +1,7 @@
 .popup {
   position: absolute;
   display: none;
-  // background-color: $dark-translucent-bg;
-  // height: 100vh;
-  // width: 100vw;
-  // cursor: pointer;
-  z-index: 20;
+  z-index: 45;
 
   &__container {
     display: flex;
@@ -103,5 +99,23 @@
     font-weight: 100;
     color: $pale;
     cursor: pointer;
+  }
+  @media (max-width: 800px) {
+    &__container {
+      padding: 30px 30px 30px 25px;
+    }
+    &__call {
+      margin-right: 20px;
+    }
+  }
+  @media (max-width: 640px) {
+    width: 90%;
+    &__container {
+      width: 100%;
+      flex-direction: column;
+    }
+    &__call {
+      margin: 0 0 30px;
+    }
   }
 }

@@ -354,6 +354,12 @@
     }
   }
   @media (max-width: 650px) {
+    &__filter {
+      display: none !important;
+    }
+    &__search-line {
+      border-radius: 5px 0 0 5px;
+    }
     &__cart {
       max-width: none;
       width: auto;

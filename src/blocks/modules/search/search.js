@@ -18,36 +18,13 @@ document.addEventListener('DOMContentLoaded', () => {
   
   cart_value.textContent = cart_value.textContent.split('')
     .reduce((res, lr, i, arr) => (i + 1) % 3 === 0 && arr.length !== i + 1 ? res += lr + ' ' : res += lr) + " руб.";
-    
-  if (window.matchMedia("(max-width: 1050px)").matches) {
-    search_btn.addEventListener("click", (e) => {
-      e.stopPropagation();
-      search_container.classList.toggle("active");
-      results.style.width = search_line.getBoundingClientRect().width + "px";
-      results.style.left = search_line.getBoundingClientRect().x + "px";
-    });
-  } else {
-      results.style.left = 1 + search_filter.getBoundingClientRect().width + "px";
-      results.style.width = search_line.getBoundingClientRect().width + "px";
-  }
 
-  window.addEventListener(`resize`, () => {
-    setTimeout(() => {
-      results.style.width = search_line.getBoundingClientRect().width + "px";
-      results.style.left = search_line.getBoundingClientRect().x + "px";
-    }, 300)
-  });
+  window.addEventListener(`resize`, () => placeResults());
 
   search_filter.addEventListener("click", (e) => {
     if (e.target.closest(".search__categories")) return;
 
     search_menu.classList.toggle("active");
-  });
-
-  window.addEventListener("click", (e) => {
-    if (e.target.closest(".search__filter")) return;
-
-    search_menu.classList.remove("active");
   });
 
   search_line.addEventListener("input", () => {
@@ -57,15 +34,10 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
     results.classList.add("active");
+    placeResults();
     
     if(window.matchMedia("(max-width: 1050px)").matches) return;
     overlay.classList.add('active', 'active--search');
-  });
-
-  window.addEventListener("click", (e) => {
-    if (e.target.classList.contains("search__search-line") || e.target.closest(".search__results")) return;
-
-    // results_wrap.classList.remove("active");
   });
 
   search_menu.addEventListener("click", (e) => {
@@ -101,9 +73,37 @@ document.addEventListener('DOMContentLoaded', () => {
 
   search_container.addEventListener('click', (e) => {
     if(e.target.classList.contains('search__search-container')) {
-      const wrapper = e.target;
-
-      wrapper.classList.remove('active');
+      const overlay = e.target;
+      overlay.classList.remove('active');
+      hideAllIn(e.target);
     }
   })
+  search_btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    search_container.classList.toggle("active");
+  })
+
+  function placeResults() {
+    setTimeout(() => {
+      if (window.matchMedia("(max-width: 1050px)").matches) {
+        placeUnder(results);
+      } else {
+        placeSomehow(results);
+      }
+    }, 300)
+  }
+  function placeUnder(el) {
+    el.style.width = search_line.getBoundingClientRect().width + "px";
+    el.style.left = search_line.getBoundingClientRect().x + "px";
+  }
+  function placeSomehow(el) {
+    el.style.width = search_line.getBoundingClientRect().width + "px";
+    el.style.left = 1 + search_filter.getBoundingClientRect().width + "px";
+  }
+  function hideAllIn(parent) {
+    const active = parent.querySelectorAll('.active');
+    active.forEach(el => {
+      el.classList.remove('active');
+    })
+  }
 })

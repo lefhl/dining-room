@@ -180,6 +180,18 @@
       font-size: $title;
     }
   }
+  @media (max-width: 450px) {
+    &__sales {
+      padding-left: 25px;
+    }
+    &__sales-title {
+      font-size: 40px;
+    }
+    &__sales-link,
+    &__sales-caption {
+      font-size: 20px;
+    }
+  }
 }
 
 .swiper-pagination {

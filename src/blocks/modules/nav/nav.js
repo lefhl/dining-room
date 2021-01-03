@@ -12,11 +12,7 @@ const popup_close = popup.querySelector(".popup__close");
 
 phone_block.addEventListener("click", (e) => open_phone(e));
 
-const open_phone = (e) => {
-  if (e.target.classList.contains("popup__close")) return;
-  popup.classList.add("active");
-  overlay.classList.add("active");
-};
+
 
 popup_close.addEventListener("click", () => {
   popup_close.closest(".popup").classList.remove("active");
@@ -59,3 +55,39 @@ window.addEventListener("click", (e) => {
   mail.classList.remove("clicked");
   copy_mail_btn.style.display = "none";
 });
+
+window.addEventListener('resize', () => {
+  if(!popup.classList.contains('active')) return;
+  if(window.matchMedia('(min-width: 1050px)').matches) {
+    locatePopup(true);
+  } else {
+    locatePopup(false);
+  }
+})
+
+function locatePopup(isScreenBig) {
+  setTimeout(() => {
+    if(isScreenBig) {
+      popup.style.right = 'auto';
+      popup.style.left = phone_block.getBoundingClientRect().x + phone_block.getBoundingClientRect().width  - popup.getBoundingClientRect().width + 'px';
+      popup.style.top = phone_block.getBoundingClientRect().y + phone_block.getBoundingClientRect().height + 'px';
+    } else {
+      const width = document.body.getBoundingClientRect().width;
+      popup.style.left = 'auto';
+      popup.style.right = width / 2 - popup.getBoundingClientRect().width / 2 + 'px';
+      popup.style.top = '96px';
+    }
+  }, 300)
+}
+
+function open_phone(e) {
+  if (e.target.classList.contains("popup__close")) return;
+
+  if(window.matchMedia('(min-width: 1050px)').matches) {
+    locatePopup(true);
+  } else {
+    locatePopup(false);
+  }
+  popup.classList.add("active");
+  overlay.classList.add("active");
+};
